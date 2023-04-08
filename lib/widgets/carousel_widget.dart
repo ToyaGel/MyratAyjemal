@@ -1,13 +1,15 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:invitation/route_helper.dart';
-import 'package:invitation/widgets/widgets.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
-class GalleryPage extends StatelessWidget {
-  GalleryPage({Key? key}) : super(key: key);
+class CarouselWithIndicatorDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _CarouselWithIndicatorState();
+  }
+}
 
-  final RxInt _current = 0.obs;
+class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
+  int _current = 0;
   final CarouselController _controller = CarouselController();
 
   final List<String> imgList = [
@@ -20,7 +22,7 @@ class GalleryPage extends StatelessWidget {
   ];
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     final List<Widget> imageSliders = imgList
         .map((item) => Container(
               child: Container(
@@ -60,80 +62,42 @@ class GalleryPage extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(249, 246, 237, 100),
-        actions: [
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                Get.offNamed(RouteHelper.initial);
-              },
-              child: TextWidget(
-                text: 'home'.tr,
-                fontSize: 16.0,
-                textAlign: TextAlign.center,
-              ),
-            ),
+      body: Column(children: [
+        Expanded(
+          child: CarouselSlider(
+            items: imageSliders,
+            carouselController: _controller,
+            options: CarouselOptions(
+                autoPlay: true,
+                enlargeCenterPage: true,
+                aspectRatio: 2.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
           ),
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                Get.offNamed(RouteHelper.aboutUs);
-              },
-              child: TextWidget(
-                text: 'aboutUs'.tr,
-                fontSize: 16.0,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-        ],
-      ),
-      body: Obx(
-        () => Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/image/background.png'),
-            ),
-          ),
-          child: Column(children: [
-            Expanded(
-              child: CarouselSlider(
-                items: imageSliders,
-                carouselController: _controller,
-                options: CarouselOptions(
-                    autoPlay: true,
-                    enlargeCenterPage: true,
-                    aspectRatio: 2.0,
-                    onPageChanged: (index, reason) {
-                      _current.value = index;
-                    }),
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: imgList.asMap().entries.map((entry) {
-                return GestureDetector(
-                  onTap: () => _controller.animateToPage(entry.key),
-                  child: Container(
-                    width: 12.0,
-                    height: 12.0,
-                    margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: (Theme.of(context).brightness == Brightness.dark
-                                ? Colors.white
-                                : Colors.black)
-                            .withOpacity(_current == entry.key ? 0.9 : 0.4)),
-                  ),
-                );
-              }).toList(),
-            ),
-          ]),
         ),
-      ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: imgList.asMap().entries.map((entry) {
+            return GestureDetector(
+              onTap: () => _controller.animateToPage(entry.key),
+              child: Container(
+                width: 12.0,
+                height: 12.0,
+                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: (Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black)
+                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+              ),
+            );
+          }).toList(),
+        ),
+      ]),
     );
   }
 }

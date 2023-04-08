@@ -1,15 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Controller extends GetxController {
-  var count = 0.obs;
-  increment() => count++;
+  var currentLanguage = 'Русский'.obs;
+  var currentLocale = Locale('tkm', 'TKM').obs;
 
-  var name = 'Jonatas Borges'.obs;
-  void change() {
-    if (name == ('Jonatas Borges')) {
-      name.value = 'aaaa';
-    } else {
-      name.value = 'Jonatas Borges';
-    }
-  }
+  // var name = 'Jonatas Borges'.obs;
+  // void changeLocalization(String? value) {
+  //   if (value == 'Türkmen dili') {
+  //     print(Get.deviceLocale);
+  //     currentLanguage.value = 'Türkmen dili';
+  //     currentLocale(const Locale('tkm', 'TKM'));
+  //   } else if (value == 'Русский') {
+  //     currentLanguage.value = 'Русский';
+  //     currentLocale(const Locale('ru', 'RU'));
+  //   } else {
+  //     currentLanguage.value = 'English';
+  //     currentLocale(const Locale('en', 'US'));
+  //   }
+  // }
 }

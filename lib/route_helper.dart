@@ -13,7 +13,7 @@ class RouteHelper {
     ),
     GetPage(
       name: gallery,
-      page: () => const GalleryPage(),
+      page: () => GalleryPage(),
     ),
     GetPage(
       name: aboutUs,
