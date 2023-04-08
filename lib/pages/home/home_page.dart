@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Get.toNamed(RouteHelper.aboutUs);
                     },
-                    child: Text('О насссс'),
+                    child: Text('О нас'),
                   ),
                 ),
                 Expanded(
