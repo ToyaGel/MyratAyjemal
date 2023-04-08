@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invitation/route_helper.dart';
-import 'package:invitation/settings_item_card.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -30,7 +29,7 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Get.toNamed(RouteHelper.aboutUs);
                     },
-                    child: Text('О нас'),
+                    child: Text('О насссс'),
                   ),
                 ),
                 Expanded(
