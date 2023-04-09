@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:invitation/route_helper.dart';
+import 'package:invitation/utils/utils.dart';
 import 'package:invitation/widgets/widgets.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
               child: TextWidget(
                 textAlign: TextAlign.center,
                 text: 'gallery',
-                fontSize: 16.0,
+                fontSize: Dimensions.textSize16,
               ),
             ),
           ),
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
               child: TextWidget(
                 textAlign: TextAlign.center,
                 text: 'aboutUs',
-                fontSize: 16.0,
+                fontSize: Dimensions.textSize16,
               ),
             ),
           ),
@@ -47,12 +48,12 @@ class HomePage extends StatelessWidget {
                   child: DropdownButton(
                     style: GoogleFonts.poiretOne(
                       fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
+                      fontSize: Dimensions.textSize16,
                       color: Colors.black,
                     ),
                     icon: Icon(
                       Icons.language,
-                      size: 20.0,
+                      size: Dimensions.iconSize20,
                     ),
                     alignment: AlignmentDirectional.centerEnd,
                     value: currentLanguage.value,
@@ -86,73 +87,111 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage('assets/image/homePageBackground.png'),
+      body: ListView(
+        children: [
+          Container(
+            width: Dimensions.screenWidth,
+            height: Dimensions.screenHeight,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage('assets/image/homePageBackground.png'),
+              ),
+            ),
+            child: ShowUpAnimation(
+              delayStart: Duration(milliseconds: 200),
+              animationDuration: Duration(milliseconds: 700),
+              curve: Curves.bounceIn,
+              direction: Direction.vertical,
+              offset: 0.5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: Dimensions.sizedBox10,
+                  ),
+                  TextWidget(
+                    textAlign: TextAlign.center,
+                    text: 'mainText',
+                    fontSize: Dimensions.textSize35,
+                  ),
+                  SizedBox(
+                    height: Dimensions.sizedBox5,
+                  ),
+                  TextWidget(
+                    textAlign: TextAlign.center,
+                    text: 'dateTime',
+                    fontSize: Dimensions.textSize18,
+                  ),
+                  TextWidget(
+                    textAlign: TextAlign.center,
+                    text: 'location',
+                    fontSize: Dimensions.textSize18,
+                  ),
+                  SizedBox(
+                    height: Dimensions.sizedBox420,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: SizedBox(),
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: TextWidget(
+                          textAlign: TextAlign.left,
+                          text: 'groom',
+                          fontSize: Dimensions.textSize30,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SizedBox(),
+                      ),
+                      Expanded(
+                        child: TextWidget(
+                          textAlign: TextAlign.left,
+                          text: 'bride',
+                          fontSize: Dimensions.textSize30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 10.0,
+          Container(
+            width: Dimensions.screenWidth,
+            height: Dimensions.screenHeight,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fitWidth,
+                image: AssetImage('assets/image/background.jpg'),
+              ),
             ),
-            TextWidget(
-              textAlign: TextAlign.center,
-              text: 'mainText',
-              fontSize: 35.0,
-            ),
-            SizedBox(
-              height: 5.0,
-            ),
-            TextWidget(
-              textAlign: TextAlign.center,
-              text: 'dateTime',
-              fontSize: 18.0,
-            ),
-            TextWidget(
-              textAlign: TextAlign.center,
-              text: 'location',
-              fontSize: 18.0,
-            ),
-            SizedBox(
-              height: 400.0,
-            ),
-            Row(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Expanded(
-                  flex: 1,
-                  child: SizedBox(),
+                SizedBox(
+                  height: Dimensions.sizedBox10,
                 ),
-                Expanded(
-                  flex: 4,
-                  child: TextWidget(
-                    textAlign: TextAlign.left,
-                    text: 'groom',
-                    fontSize: 32.0,
-                  ),
+                CarouselWidget(),
+                SizedBox(
+                  height: Dimensions.sizedBox10,
                 ),
+                TextWidget(
+                    text: 'Yorga', fontSize: Dimensions.textSize30, textAlign: TextAlign.center),
+                TextWidget(
+                    text: 'info'.tr, fontSize: Dimensions.textSize18, textAlign: TextAlign.center),
               ],
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: SizedBox(),
-                ),
-                Expanded(
-                  child: TextWidget(
-                    textAlign: TextAlign.left,
-                    text: 'bride',
-                    fontSize: 32.0,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

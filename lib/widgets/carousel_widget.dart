@@ -1,17 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CarouselWithIndicatorDemo extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _CarouselWithIndicatorState();
-  }
-}
-
-class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
-  int _current = 0;
+class CarouselWidget extends StatelessWidget {
+  final RxInt _current = 0.obs;
   final CarouselController _controller = CarouselController();
-
   final List<String> imgList = [
     'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
     'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
@@ -61,22 +54,18 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
             ))
         .toList();
 
-    return Scaffold(
-      body: Column(children: [
-        Expanded(
-          child: CarouselSlider(
-            items: imageSliders,
-            carouselController: _controller,
-            options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 2.0,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _current = index;
-                  });
-                }),
-          ),
+    return Column(
+      children: [
+        CarouselSlider(
+          items: imageSliders,
+          carouselController: _controller,
+          options: CarouselOptions(
+              autoPlay: true,
+              enlargeCenterPage: true,
+              aspectRatio: 2.0,
+              onPageChanged: (index, reason) {
+                _current.value = index;
+              }),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -97,7 +86,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
             );
           }).toList(),
         ),
-      ]),
+      ],
     );
   }
 }

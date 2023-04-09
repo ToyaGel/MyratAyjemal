@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invitation/route_helper.dart';
+import 'package:invitation/utils/route_helper.dart';
 import 'package:invitation/widgets/widgets.dart';
 
 class AboutUsPage extends StatelessWidget {

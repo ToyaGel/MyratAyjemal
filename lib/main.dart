@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invitation/localization.dart';
-import 'package:invitation/route_helper.dart';
+import 'package:invitation/utils/localization.dart';
+import 'package:invitation/utils/route_helper.dart';
 
 void main() {
   runApp(const MyApp());

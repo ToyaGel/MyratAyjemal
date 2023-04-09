@@ -16,7 +16,9 @@ class Localization extends Translations {
           'aboutUs': 'About us',
           'home': 'Home',
           'info':
-              'Business society\nStreet 1946 (Ankara) 23, Ashgabad 744000 Turkmenistan\nOfficial website: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nPhone: (+993 65) 552759',
+              'Official website: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nPhone: (+993 63) 581010',
+          // 'info':
+          //     'Business society\nStreet 1946 (Ankara) 23, Ashgabad 744000 Turkmenistan\nOfficial website: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nPhone: (+993 65) 552759',
         },
         'ru_RU': {
           //gallery page
@@ -31,7 +33,9 @@ class Localization extends Translations {
           'aboutUs': 'О нас',
           'home': 'Главная',
           'info':
-              'Хозяйственное общество\nУлица 1946 (Ankara) 23, Ашгабат 744000 Туркменистан\nОфициальный сайт: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nТелефон: (+993 65) 552759',
+              'Официальный сайт: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nТелефон: (+993 63) 581010',
+          // 'info':
+          //     'Хозяйственное общество\nУлица 1946 (Ankara) 23, Ашгабат 744000 Туркменистан\nОфициальный сайт: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nТелефон: (+993 65) 552759',
         },
         'tkm_TKM': {
           //gallery page
@@ -46,7 +50,9 @@ class Localization extends Translations {
           'aboutUs': 'Biz barada',
           'home': 'Baš sahypa',
           'info':
-              'Hususy Jemgyÿet\nAśgabat śäheri, 1946 (Ankara) köçesi, 23 jaÿ 744000 Turkmenistan\nWeb-sahypa: yorgatravel.com \nEmail: yorga.ltd@gmail.com \Telefon: (+993 65) 552759',
+              'Web-sahypa: yorgatravel.com \nEmail: yorga.ltd@gmail.com \Telefon: (+993 63) 581010',
+          // 'info':
+          //     'Hususy Jemgyÿet\nAśgabat śäheri, 1946 (Ankara) köçesi, 23 jaÿ 744000 Turkmenistan\nWeb-sahypa: yorgatravel.com \nEmail: yorga.ltd@gmail.com \Telefon: (+993 65) 552759',
         }
       };
 }
