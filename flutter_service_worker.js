@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "2aa3c57100564158890f8d71e4f523a9",
-"index.html": "abc9af3b3e0561f5994e0e33db3c1d26",
-"/": "abc9af3b3e0561f5994e0e33db3c1d26",
+"index.html": "df79c23ccbd6b8b419e5d0ace3b0b35b",
+"/": "df79c23ccbd6b8b419e5d0ace3b0b35b",
 "main.dart.js": "51505c5d8c355ee463e3fcea90c4917d",
 "flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
@@ -25,10 +25,6 @@ const RESOURCES = {
 "assets/assets/image/ToyaGel%2520Logo.png": "f810af71729f00884faec6d1fc5e76f4",
 "assets/assets/image/background2.jpg": "fb6478ba04c056d5d54e69882890cf65",
 "assets/assets/image/background1.jpg": "1162288b3e5fc8e0f70e836fd695219e",
-"assets/assets/image/YorgaLogo.png": "5eb3d716d6f8a7a8c23fd154f0984014",
-"assets/assets/image/background.jpg": "2ac623130cfe596f3551f2d5b24cdbdd",
-"assets/assets/image/background.png": "a1160246484a3cae92e50b97452baa72",
-"assets/assets/image/homePageBackground.png": "8a825cdbb30ab0817ff9d19a2cd06376",
 "assets/assets/font/Montserrat-Medium.ttf": "b3ba703c591edd4aad57f8f4561a287b",
 "assets/assets/font/Montserrat-Light.ttf": "e65ae7ed560da1a63db603bd8584cfdb",
 "assets/assets/font/Montserrat-Thin.ttf": "4b73d125bab54f94ed2510590c237f73",
