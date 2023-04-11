@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:invitation/utils/utils.dart';
 import 'package:invitation/widgets/widgets.dart';
 import 'package:show_up_animation/show_up_animation.dart';
@@ -8,79 +7,55 @@ import 'package:show_up_animation/show_up_animation.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
-  var currentLanguage = 'Русский'.tr.obs;
+  final currentLanguage = 'Русский'.tr.obs;
 
   @override
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(249, 246, 237, 100),
+        backgroundColor: const Color.fromRGBO(249, 246, 237, 100),
+        leading: Padding(
+            padding: const EdgeInsets.all(5.0), child: Image.asset('assets/image/TCH logo.png')),
         actions: [
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                Get.toNamed(RouteHelper.gallery);
-              },
-              child: TextWidget(
-                textAlign: TextAlign.center,
-                text: 'gallery',
-                fontSize: Dimensions.textSize16,
-              ),
-            ),
-          ),
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                Get.toNamed(RouteHelper.aboutUs);
-              },
-              child: TextWidget(
-                textAlign: TextAlign.center,
-                text: 'aboutUs',
-                fontSize: Dimensions.textSize16,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 13.0),
-              child: Obx(
-                () => DropdownButtonHideUnderline(
-                  child: DropdownButton(
-                    style: GoogleFonts.poiretOne(
-                      fontWeight: FontWeight.w900,
-                      fontSize: Dimensions.textSize16,
-                      color: Colors.black,
-                    ),
-                    icon: Icon(
-                      Icons.language,
-                      size: Dimensions.iconSize20,
-                    ),
-                    alignment: AlignmentDirectional.centerEnd,
-                    value: currentLanguage.value,
-                    onChanged: (String? value) {
-                      if (value == 'Türkmen dili') {
-                        print(Get.deviceLocale);
-                        currentLanguage.value = 'Türkmen dili';
-                        Get.updateLocale(const Locale('tkm', 'TKM'));
-                      } else if (value == 'Русский') {
-                        currentLanguage.value = 'Русский';
-                        Get.updateLocale(const Locale('ru', 'RU'));
-                      } else {
-                        currentLanguage.value = 'English';
-                        Get.updateLocale(const Locale('en', 'US'));
-                      }
-                    },
-                    items: [
-                      'Türkmen dili',
-                      'English',
-                      'Русский',
-                    ].map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
+          Obx(
+            () => DropdownButtonHideUnderline(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 13.0),
+                child: DropdownButton(
+                  style: TextStyle(
+                    fontFamily: 'PoiretOne',
+                    fontWeight: FontWeight.w900,
+                    fontSize: Dimensions.textSize16,
+                    color: Colors.black,
                   ),
+                  icon: Icon(
+                    Icons.language,
+                    size: Dimensions.iconSize20,
+                  ),
+                  value: currentLanguage.value,
+                  alignment: Alignment.center,
+                  onChanged: (String? value) {
+                    if (value == 'Türkmen dili') {
+                      currentLanguage.value = 'Türkmen dili';
+                      Get.updateLocale(const Locale('tkm', 'TKM'));
+                    } else if (value == 'Русский') {
+                      currentLanguage.value = 'Русский';
+                      Get.updateLocale(const Locale('ru', 'RU'));
+                    } else {
+                      currentLanguage.value = 'English';
+                      Get.updateLocale(const Locale('en', 'US'));
+                    }
+                  },
+                  items: [
+                    'Türkmen dili',
+                    'English',
+                    'Русский',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
             ),
@@ -95,12 +70,12 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage('assets/image/homePageBackground.png'),
+                image: AssetImage('assets/image/background1.jpg'),
               ),
             ),
             child: ShowUpAnimation(
-              delayStart: Duration(milliseconds: 200),
-              animationDuration: Duration(milliseconds: 700),
+              delayStart: const Duration(milliseconds: 200),
+              animationDuration: const Duration(milliseconds: 700),
               curve: Curves.bounceIn,
               direction: Direction.vertical,
               offset: 0.5,
@@ -133,7 +108,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Expanded(
+                      const Expanded(
                         flex: 1,
                         child: SizedBox(),
                       ),
@@ -149,7 +124,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: SizedBox(),
                       ),
                       Expanded(
@@ -165,13 +140,19 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          const Divider(
+            thickness: 2.0,
+            height: 0.0,
+            endIndent: 10.0,
+            indent: 10.0,
+            color: Color.fromRGBO(93, 108, 80, 100),
+          ),
           Container(
             width: Dimensions.screenWidth,
-            height: Dimensions.screenHeight,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fitWidth,
-                image: AssetImage('assets/image/background.jpg'),
+                image: AssetImage('assets/image/background2.jpg'),
               ),
             ),
             child: Column(
@@ -185,9 +166,14 @@ class HomePage extends StatelessWidget {
                   height: Dimensions.sizedBox10,
                 ),
                 TextWidget(
-                    text: 'Yorga', fontSize: Dimensions.textSize30, textAlign: TextAlign.center),
+                    text: 'contact'.tr,
+                    fontSize: Dimensions.textSize30,
+                    textAlign: TextAlign.center),
                 TextWidget(
-                    text: 'info'.tr, fontSize: Dimensions.textSize18, textAlign: TextAlign.center),
+                  text: 'info'.tr,
+                  fontSize: Dimensions.textSize18,
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ),

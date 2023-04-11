@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget(
@@ -15,10 +14,7 @@ class TextWidget extends StatelessWidget {
     return Text(
       text.tr,
       textAlign: textAlign,
-      style: GoogleFonts.poiretOne(
-        fontWeight: FontWeight.w900,
-        fontSize: fontSize,
-      ),
+      style: TextStyle(fontFamily: 'PoiretOne', fontSize: fontSize, fontWeight: FontWeight.w900),
     );
   }
 }

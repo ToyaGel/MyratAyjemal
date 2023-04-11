@@ -23,45 +23,43 @@ class GalleryPage extends StatelessWidget {
   Widget build(context) {
     final List<Widget> imageSliders = imgList
         .map((item) => Container(
-              child: Container(
-                margin: EdgeInsets.all(5.0),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    child: Stack(
-                      children: <Widget>[
-                        Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                        Positioned(
-                          bottom: 0.0,
-                          left: 0.0,
-                          right: 0.0,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [Color.fromARGB(200, 0, 0, 0), Color.fromARGB(0, 0, 0, 0)],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                              ),
+              margin: const EdgeInsets.all(5.0),
+              child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                  child: Stack(
+                    children: <Widget>[
+                      Image.network(item, fit: BoxFit.cover, width: 1000.0),
+                      Positioned(
+                        bottom: 0.0,
+                        left: 0.0,
+                        right: 0.0,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Color.fromARGB(200, 0, 0, 0), Color.fromARGB(0, 0, 0, 0)],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
                             ),
-                            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                            child: Text(
-                              'No. ${imgList.indexOf(item)} image',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                          child: Text(
+                            'No. ${imgList.indexOf(item)} image',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                      ],
-                    )),
-              ),
+                      ),
+                    ],
+                  )),
             ))
         .toList();
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(249, 246, 237, 100),
+        backgroundColor: const Color.fromRGBO(249, 246, 237, 100),
         actions: [
           Expanded(
             child: TextButton(
@@ -92,10 +90,10 @@ class GalleryPage extends StatelessWidget {
       body: Obx(
         () => Container(
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/image/background.png'),
+              image: AssetImage('assets/image/background2.jpg'),
             ),
           ),
           child: Column(children: [
@@ -120,7 +118,7 @@ class GalleryPage extends StatelessWidget {
                   child: Container(
                     width: 12.0,
                     height: 12.0,
-                    margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                    margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: (Theme.of(context).brightness == Brightness.dark

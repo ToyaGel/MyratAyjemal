@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:invitation/utils/localization.dart';
 import 'package:invitation/utils/route_helper.dart';
 
+import 'utils/constants.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,19 +22,7 @@ class MyApp extends StatelessWidget {
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
       translations: Localization(),
-      theme: _lightTheme,
+      theme: lightTheme,
     );
   }
 }
-
-ThemeData _lightTheme = ThemeData(
-    colorScheme: ColorScheme.fromSwatch().copyWith(
-      primary: const Color(0xFF0A0A0A),
-      secondary: const Color(0xFFFFC107),
-    ),
-    brightness: Brightness.light,
-    primaryColor: Color.fromRGBO(249, 246, 237, 100),
-    buttonTheme: ButtonThemeData(
-      buttonColor: Colors.red,
-      disabledColor: Colors.grey,
-    ));

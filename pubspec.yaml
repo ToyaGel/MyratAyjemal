@@ -17,6 +17,8 @@ dependencies:
   carousel_slider: ^4.2.1
   google_fonts: ^4.0.3
   show_up_animation: ^2.0.0
+  video_player: ^2.6.1
+  pod_player: ^0.1.0
 
 dev_dependencies:
   flutter_test:
@@ -46,3 +48,6 @@ flutter:
           weight: 300
         - asset: assets/font/Montserrat-Thin.ttf
           weight: 200
+    - family: PoiretOne
+      fonts:
+        - asset: assets/font/PoiretOne-Regular.ttf

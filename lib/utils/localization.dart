@@ -15,10 +15,8 @@ class Localization extends Translations {
           //about us page
           'aboutUs': 'About us',
           'home': 'Home',
-          'info':
-              'Official website: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nPhone: (+993 63) 581010',
-          // 'info':
-          //     'Business society\nStreet 1946 (Ankara) 23, Ashgabad 744000 Turkmenistan\nOfficial website: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nPhone: (+993 65) 552759',
+          'contact': 'Contact:',
+          'info': 'Email: toychakylyklary@gmail.com \nPhone: (+993 63) 581010',
         },
         'ru_RU': {
           //gallery page
@@ -32,10 +30,8 @@ class Localization extends Translations {
           //about us page
           'aboutUs': 'О нас',
           'home': 'Главная',
-          'info':
-              'Официальный сайт: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nТелефон: (+993 63) 581010',
-          // 'info':
-          //     'Хозяйственное общество\nУлица 1946 (Ankara) 23, Ашгабат 744000 Туркменистан\nОфициальный сайт: yorgatravel.com \nEmail: yorga.ltd@gmail.com \nТелефон: (+993 65) 552759',
+          'contact': 'Контакты:',
+          'info': 'Email: toychakylyklary@gmail.com \nТелефон: (+993 63) 581010',
         },
         'tkm_TKM': {
           //gallery page
@@ -49,10 +45,8 @@ class Localization extends Translations {
           //about us page
           'aboutUs': 'Biz barada',
           'home': 'Baš sahypa',
-          'info':
-              'Web-sahypa: yorgatravel.com \nEmail: yorga.ltd@gmail.com \Telefon: (+993 63) 581010',
-          // 'info':
-          //     'Hususy Jemgyÿet\nAśgabat śäheri, 1946 (Ankara) köçesi, 23 jaÿ 744000 Turkmenistan\nWeb-sahypa: yorgatravel.com \nEmail: yorga.ltd@gmail.com \Telefon: (+993 65) 552759',
+          'contact': 'Habarlaśmak üçin:',
+          'info': 'Email: toychakylyklary@gmail.com\nTelefon: (+993 63) 581010',
         }
       };
 }
