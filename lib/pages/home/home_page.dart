@@ -15,7 +15,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(249, 246, 237, 100),
         leading: Padding(
-            padding: const EdgeInsets.all(5.0), child: Image.asset('assets/image/TCH logo.png')),
+          padding: const EdgeInsets.all(5.0),
+          child: Image.asset('assets/image/ToyaGel Logo.png'),
+        ),
         actions: [
           Obx(
             () => DropdownButtonHideUnderline(
@@ -155,26 +157,29 @@ class HomePage extends StatelessWidget {
                 image: AssetImage('assets/image/background2.jpg'),
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: Dimensions.sizedBox10,
-                ),
-                CarouselWidget(),
-                SizedBox(
-                  height: Dimensions.sizedBox10,
-                ),
-                TextWidget(
-                    text: 'contact'.tr,
-                    fontSize: Dimensions.textSize30,
-                    textAlign: TextAlign.center),
-                TextWidget(
-                  text: 'info'.tr,
-                  fontSize: Dimensions.textSize18,
-                  textAlign: TextAlign.center,
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: Dimensions.sizedBox10,
+                  ),
+                  CarouselWidget(),
+                  SizedBox(
+                    height: Dimensions.sizedBox10,
+                  ),
+                  TextWidget(
+                      text: 'contact'.tr,
+                      fontSize: Dimensions.textSize30,
+                      textAlign: TextAlign.center),
+                  TextWidget(
+                    text: 'info'.tr,
+                    fontSize: Dimensions.textSize18,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
