@@ -4,49 +4,38 @@ class Localization extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
-          //gallery page
-          'gallery': 'Gallery',
           'mainText': 'Happy Wedding',
-          'dateTime': 'Monday, July 25th At 18:00',
-          'location': 'Restaurant "Toÿ Mekany"',
+          'dateTime': 'Sunday, April 30th At 18:00',
+          'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" Small hall',
           'groom': 'Ata',
           'bride': 'Akjemal',
-
-          //about us page
-          'aboutUs': 'About us',
-          'home': 'Home',
           'contact': 'Contact:',
           'info': 'Email: toychakylyklary@gmail.com \nPhone: (+993 63) 581010',
+          'saveDate': 'Save date',
+          'aboutUs': 'About us',
         },
         'ru_RU': {
-          //gallery page
-          'gallery': 'Галерея',
           'mainText': 'Счастливая Свадьба',
-          'dateTime': 'Понедельник, Июль 25ого в 18:00',
-          'location': 'Ресторан "Toÿ Mekany"',
+          'dateTime': 'Воскресенье, Апрель 30ого в 18:00',
+          'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" Малый зал',
           'groom': 'Ата',
           'bride': 'Акджемал',
-
-          //about us page
-          'aboutUs': 'О нас',
-          'home': 'Главная',
           'contact': 'Контакты:',
           'info': 'Email: toychakylyklary@gmail.com \nТелефон: (+993 63) 581010',
+          'saveDate': 'Сохранить дату',
+          'aboutUs': 'О нас',
         },
         'tkm_TKM': {
-          //gallery page
           'gallery': 'Suratlar',
           'mainText': 'Bagtly Toÿ',
-          'dateTime': 'Duśenbe, Iÿul 25 sagat 18:00',
-          'location': 'Restoran "Toÿ Mekany"',
+          'dateTime': 'Ÿekśenbe, Aprel 30 sagat 18:00',
+          'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" kiçi zal',
           'groom': 'Ata',
           'bride': 'Akjemal',
-
-          //about us page
-          'aboutUs': 'Biz barada',
-          'home': 'Baš sahypa',
           'contact': 'Habarlaśmak üçin:',
           'info': 'Email: toychakylyklary@gmail.com\nTelefon: (+993 63) 581010',
+          'saveDate': 'Senäni belle',
+          'aboutUs': 'Habarlaśmak üçin',
         }
       };
 }

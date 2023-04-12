@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invitation/utils/utils.dart';
 import 'package:invitation/widgets/widgets.dart';
-import 'package:show_up_animation/show_up_animation.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -13,51 +12,56 @@ class HomePage extends StatelessWidget {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(249, 246, 237, 100),
-        leading: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Image.asset('assets/image/ToyaGel Logo.png'),
+        backgroundColor: const Color.fromRGBO(222, 185, 97, 1.0),
+        leading: ShowUpAnimationWidget(
+          widget: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Image.asset('assets/image/ToyaGel Logo.png'),
+          ),
         ),
         actions: [
           Obx(
-            () => DropdownButtonHideUnderline(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 13.0),
-                child: DropdownButton(
-                  style: TextStyle(
-                    fontFamily: 'PoiretOne',
-                    fontWeight: FontWeight.w900,
-                    fontSize: Dimensions.textSize16,
-                    color: Colors.black,
+            () => ShowUpAnimationWidget(
+              widget: DropdownButtonHideUnderline(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 13.0),
+                  child: DropdownButton(
+                    style: TextStyle(
+                      fontFamily: 'PoiretOne',
+                      fontWeight: FontWeight.w900,
+                      fontSize: Dimensions.textSize16,
+                      color: Colors.black,
+                    ),
+                    dropdownColor: const Color.fromRGBO(223, 187, 117, 1.0),
+                    icon: Icon(
+                      Icons.language,
+                      size: Dimensions.iconSize20,
+                    ),
+                    value: currentLanguage.value,
+                    alignment: Alignment.center,
+                    onChanged: (String? value) {
+                      if (value == 'Türkmen dili') {
+                        currentLanguage.value = 'Türkmen dili';
+                        Get.updateLocale(const Locale('tkm', 'TKM'));
+                      } else if (value == 'Русский') {
+                        currentLanguage.value = 'Русский';
+                        Get.updateLocale(const Locale('ru', 'RU'));
+                      } else {
+                        currentLanguage.value = 'English';
+                        Get.updateLocale(const Locale('en', 'US'));
+                      }
+                    },
+                    items: [
+                      'Türkmen dili',
+                      'English',
+                      'Русский',
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
                   ),
-                  icon: Icon(
-                    Icons.language,
-                    size: Dimensions.iconSize20,
-                  ),
-                  value: currentLanguage.value,
-                  alignment: Alignment.center,
-                  onChanged: (String? value) {
-                    if (value == 'Türkmen dili') {
-                      currentLanguage.value = 'Türkmen dili';
-                      Get.updateLocale(const Locale('tkm', 'TKM'));
-                    } else if (value == 'Русский') {
-                      currentLanguage.value = 'Русский';
-                      Get.updateLocale(const Locale('ru', 'RU'));
-                    } else {
-                      currentLanguage.value = 'English';
-                      Get.updateLocale(const Locale('en', 'US'));
-                    }
-                  },
-                  items: [
-                    'Türkmen dili',
-                    'English',
-                    'Русский',
-                  ].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
                 ),
               ),
             ),
@@ -72,117 +76,112 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage('assets/image/background1.jpg'),
+                image: AssetImage('assets/image/background_e1.jpg'),
               ),
             ),
-            child: ShowUpAnimation(
-              delayStart: const Duration(milliseconds: 200),
-              animationDuration: const Duration(milliseconds: 700),
-              curve: Curves.bounceIn,
-              direction: Direction.vertical,
-              offset: 0.5,
-              child: Column(
+            child: ShowUpAnimationWidget(
+              widget: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: Dimensions.sizedBox10,
+                    height: Dimensions.sizedBox130,
                   ),
                   TextWidget(
                     textAlign: TextAlign.center,
                     text: 'mainText',
-                    fontSize: Dimensions.textSize35,
+                    fontSize: Dimensions.textSize38,
                   ),
                   SizedBox(
-                    height: Dimensions.sizedBox5,
+                    height: Dimensions.sizedBox10,
                   ),
                   TextWidget(
                     textAlign: TextAlign.center,
                     text: 'dateTime',
-                    fontSize: Dimensions.textSize18,
+                    fontSize: Dimensions.textSize20,
+                  ),
+                  SizedBox(
+                    height: Dimensions.sizedBox10,
                   ),
                   TextWidget(
                     textAlign: TextAlign.center,
                     text: 'location',
-                    fontSize: Dimensions.textSize18,
+                    fontSize: Dimensions.textSize20,
                   ),
                   SizedBox(
-                    height: Dimensions.sizedBox420,
+                    height: Dimensions.sizedBox100,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Expanded(
-                        flex: 1,
-                        child: SizedBox(),
+                      TextWidget(
+                        textAlign: TextAlign.center,
+                        text: 'groom',
+                        fontSize: Dimensions.textSize38,
                       ),
-                      Expanded(
-                        flex: 4,
-                        child: TextWidget(
-                          textAlign: TextAlign.left,
-                          text: 'groom',
-                          fontSize: Dimensions.textSize30,
-                        ),
+                      TextWidget(
+                        textAlign: TextAlign.center,
+                        text: ' & ',
+                        fontSize: Dimensions.textSize20,
+                      ),
+                      TextWidget(
+                        textAlign: TextAlign.left,
+                        text: 'bride',
+                        fontSize: Dimensions.textSize38,
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      const Expanded(
-                        child: SizedBox(),
-                      ),
-                      Expanded(
-                        child: TextWidget(
-                          textAlign: TextAlign.left,
-                          text: 'bride',
-                          fontSize: Dimensions.textSize30,
+                  SizedBox(
+                    height: Dimensions.sizedBox130,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ShowUpAnimationWidget(
+                          widget: IconButton(
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
+                                  backgroundColor: const Color.fromRGBO(30, 30, 30, 1.0),
+                                  title: TextWidget(
+                                    text: 'aboutUs'.tr,
+                                    textAlign: TextAlign.center,
+                                    fontSize: Dimensions.textSize18,
+                                  ),
+                                  content: TextWidget(
+                                    text: 'info'.tr,
+                                    textAlign: TextAlign.center,
+                                    fontSize: Dimensions.textSize16,
+                                  ),
+                                ),
+                              );
+                            },
+                            alignment: Alignment.centerLeft,
+                            color: const Color.fromRGBO(223, 187, 117, 100),
+                            icon: const Icon(Icons.info_outline),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const Divider(
-            thickness: 2.0,
-            height: 0.0,
-            endIndent: 10.0,
-            indent: 10.0,
-            color: Color.fromRGBO(93, 108, 80, 100),
-          ),
-          Container(
-            width: Dimensions.screenWidth,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.fitWidth,
-                image: AssetImage('assets/image/background2.jpg'),
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: Dimensions.sizedBox10,
-                  ),
-                  CarouselWidget(),
-                  SizedBox(
-                    height: Dimensions.sizedBox10,
-                  ),
-                  TextWidget(
-                      text: 'contact'.tr,
-                      fontSize: Dimensions.textSize30,
-                      textAlign: TextAlign.center),
-                  TextWidget(
-                    text: 'info'.tr,
-                    fontSize: Dimensions.textSize18,
-                    textAlign: TextAlign.center,
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
           ),
         ],
+      ),
+      floatingActionButton: ShowUpAnimationWidget(
+        widget: TextButton(
+          style: TextButton.styleFrom(backgroundColor: Colors.white24),
+          onPressed: () {},
+          child: TextWidget(
+            text: 'saveDate'.tr,
+            fontSize: Dimensions.textSize20,
+            textAlign: TextAlign.center,
+          ),
+        ),
       ),
     );
   }

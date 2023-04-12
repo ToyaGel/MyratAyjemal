@@ -14,7 +14,12 @@ class TextWidget extends StatelessWidget {
     return Text(
       text.tr,
       textAlign: textAlign,
-      style: TextStyle(fontFamily: 'PoiretOne', fontSize: fontSize, fontWeight: FontWeight.w900),
+      style: TextStyle(
+        fontFamily: 'PoiretOne',
+        fontSize: fontSize,
+        fontWeight: FontWeight.w900,
+        color: const Color.fromRGBO(223, 187, 117, 100),
+      ),
     );
   }
 }
