@@ -11,7 +11,7 @@ class Localization extends Translations {
           'bride': 'Akjemal',
           'contact': 'Contact:',
           'email': 'Email: toychakylyklary@gmail.com',
-          'tel': 'nPhone: (+993 63) 581010',
+          'tel': 'Phone: (+993 63) 581010',
           'copied': 'Copied',
         },
         'ru_RU': {
