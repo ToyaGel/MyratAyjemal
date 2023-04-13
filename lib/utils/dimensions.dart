@@ -12,6 +12,7 @@ class Dimensions {
   static double iconSize20 = screenHeight / 33.2;
 
   static double sizedBox180 = screenHeight / 3.68;
+  static double sizedBox130 = screenHeight / 5.1;
   static double sizedBox100 = screenHeight / 6.44;
   static double sizedBox10 = screenHeight / 64.4;
 }

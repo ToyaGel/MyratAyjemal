@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: Dimensions.sizedBox180,
+                    height: Dimensions.sizedBox130,
                   ),
                   TextWidget(
                     textAlign: TextAlign.center,
@@ -132,7 +132,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: Dimensions.sizedBox180,
+                    height: 180,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
