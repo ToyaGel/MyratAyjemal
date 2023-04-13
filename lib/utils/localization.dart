@@ -5,7 +5,7 @@ class Localization extends Translations {
   Map<String, Map<String, String>> get keys => {
         'en_US': {
           'mainText': 'Happy Wedding',
-          'dateTime': 'Sunday, April 30th At 18:00',
+          'dateTime': 'Sunday, April 28th At 18:00',
           'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" Small hall',
           'groom': 'Ata',
           'bride': 'Akjemal',
@@ -16,7 +16,7 @@ class Localization extends Translations {
         },
         'ru_RU': {
           'mainText': 'Счастливая Свадьба',
-          'dateTime': 'Воскресенье, Апрель 30ого в 18:00',
+          'dateTime': 'Воскресенье, Апрель 28ого в 18:00',
           'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" Малый зал',
           'groom': 'Ата',
           'bride': 'Акджемал',
@@ -29,7 +29,7 @@ class Localization extends Translations {
         'tkm_TKM': {
           'gallery': 'Suratlar',
           'mainText': 'Bagtly Toÿ',
-          'dateTime': 'Ÿekśenbe, Aprel 30 sagat 18:00',
+          'dateTime': 'Ÿekśenbe, Aprel 28 sagat 18:00',
           'location': 'Türkmenbaśy Śaÿoly "Toÿ Mekany" kiçi zal',
           'groom': 'Ata',
           'bride': 'Akjemal',
