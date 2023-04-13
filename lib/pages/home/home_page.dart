@@ -1,7 +1,7 @@
+import 'package:AtaAkjemal/utils/utils.dart';
+import 'package:AtaAkjemal/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invitation/utils/utils.dart';
-import 'package:invitation/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);

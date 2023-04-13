@@ -1,7 +1,6 @@
+import 'package:AtaAkjemal/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invitation/utils/localization.dart';
-import 'package:invitation/utils/route_helper.dart';
 
 import 'utils/constants.dart';
 

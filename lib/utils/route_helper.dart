@@ -1,5 +1,5 @@
+import 'package:AtaAkjemal/pages/home/home_page.dart';
 import 'package:get/get.dart';
-import 'package:invitation/pages/pages.dart';
 
 class RouteHelper {
   static const String initial = '/';
