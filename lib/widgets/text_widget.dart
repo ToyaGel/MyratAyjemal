@@ -1,3 +1,4 @@
+import 'package:AtaAkjemal/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class TextWidget extends StatelessWidget {
         fontFamily: 'PoiretOne',
         fontSize: fontSize,
         fontWeight: FontWeight.w900,
-        color: const Color.fromRGBO(223, 187, 117, 100),
+        color: primaryColor,
       ),
     );
   }

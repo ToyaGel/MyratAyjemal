@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: RouteHelper.initial,
       getPages: RouteHelper.routes,
-      locale: Get.deviceLocale,
+      locale: const Locale('tkm', 'TKM'),
       fallbackLocale: const Locale('en', 'US'),
       translations: Localization(),
-      theme: lightTheme,
+      theme: themeData,
     );
   }
 }

@@ -10,9 +10,9 @@ class Localization extends Translations {
           'groom': 'Ata',
           'bride': 'Akjemal',
           'contact': 'Contact:',
-          'info': 'Email: toychakylyklary@gmail.com \nPhone: (+993 63) 581010',
-          'saveDate': 'Save date',
-          'aboutUs': 'About us',
+          'email': 'Email: toychakylyklary@gmail.com',
+          'tel': 'nPhone: (+993 63) 581010',
+          'copied': 'Copied',
         },
         'ru_RU': {
           'mainText': 'Счастливая Свадьба',
@@ -21,9 +21,10 @@ class Localization extends Translations {
           'groom': 'Ата',
           'bride': 'Акджемал',
           'contact': 'Контакты:',
-          'info': 'Email: toychakylyklary@gmail.com \nТелефон: (+993 63) 581010',
           'saveDate': 'Сохранить дату',
-          'aboutUs': 'О нас',
+          'email': 'Email: toychakylyklary@gmail.com',
+          'tel': 'Телефон: (+993 63) 581010',
+          'copied': 'Скопировано',
         },
         'tkm_TKM': {
           'gallery': 'Suratlar',
@@ -33,9 +34,9 @@ class Localization extends Translations {
           'groom': 'Ata',
           'bride': 'Akjemal',
           'contact': 'Habarlaśmak üçin:',
-          'info': 'Email: toychakylyklary@gmail.com\nTelefon: (+993 63) 581010',
-          'saveDate': 'Senäni belle',
-          'aboutUs': 'Habarlaśmak üçin',
+          'email': 'Email: toychakylyklary@gmail.com',
+          'tel': 'Telefon: (+993 63) 581010',
+          'copied': 'Göçürildi',
         }
       };
 }

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme = ThemeData(
-    colorScheme: ColorScheme.fromSwatch().copyWith(
-      primary: const Color(0xFF0A0A0A),
-      secondary: const Color(0xFFFFC107),
-    ),
-    brightness: Brightness.light,
-    primaryColor: const Color.fromRGBO(222, 185, 97, 1.0),
-    buttonTheme: const ButtonThemeData(
-      buttonColor: Colors.red,
-      disabledColor: Colors.grey,
-    ));
+const Color primaryColor = Color.fromRGBO(222, 185, 97, 1.0);
+const Color dropdownColor = Color.fromRGBO(230, 181, 91, 1.0);
+const Color dialogColor = Color.fromRGBO(66, 66, 66, 1.0);
+
+ThemeData themeData = ThemeData(
+  toggleableActiveColor: primaryColor,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.amber)
+      .copyWith(secondary: primaryColor, brightness: Brightness.dark),
+);

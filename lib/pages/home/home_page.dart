@@ -6,13 +6,13 @@ import 'package:get/get.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
-  final currentLanguage = 'Русский'.tr.obs;
+  final currentLanguage = 'Türkmen dili'.tr.obs;
 
   @override
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(222, 185, 97, 1.0),
+        backgroundColor: primaryColor,
         leading: ShowUpAnimationWidget(
           widget: Padding(
             padding: const EdgeInsets.all(5.0),
@@ -32,10 +32,11 @@ class HomePage extends StatelessWidget {
                       fontSize: Dimensions.textSize16,
                       color: Colors.black,
                     ),
-                    dropdownColor: const Color.fromRGBO(223, 187, 117, 1.0),
+                    dropdownColor: dropdownColor,
                     icon: Icon(
                       Icons.language,
                       size: Dimensions.iconSize20,
+                      color: Colors.black54,
                     ),
                     value: currentLanguage.value,
                     alignment: Alignment.center,
@@ -135,31 +136,53 @@ class HomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         ShowUpAnimationWidget(
                           widget: IconButton(
                             onPressed: () {
                               showDialog(
                                 context: context,
-                                builder: (_) => AlertDialog(
-                                  backgroundColor: const Color.fromRGBO(30, 30, 30, 1.0),
-                                  title: TextWidget(
-                                    text: 'aboutUs'.tr,
-                                    textAlign: TextAlign.center,
-                                    fontSize: Dimensions.textSize18,
-                                  ),
-                                  content: TextWidget(
-                                    text: 'info'.tr,
-                                    textAlign: TextAlign.center,
-                                    fontSize: Dimensions.textSize16,
+                                builder: (context) => ScaffoldMessenger(
+                                  child: Builder(
+                                    builder: (context) => Scaffold(
+                                      backgroundColor: Colors.transparent,
+                                      body: GestureDetector(
+                                        behavior: HitTestBehavior.opaque,
+                                        onTap: () => Navigator.of(context).pop(),
+                                        child: AlertDialog(
+                                          backgroundColor: dialogColor,
+                                          title: TextWidget(
+                                            text: 'contact'.tr,
+                                            textAlign: TextAlign.center,
+                                            fontSize: Dimensions.textSize18,
+                                          ),
+                                          content: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              const DialogTextButton(
+                                                text: 'email',
+                                                copiedText: 'toychakylyklary@gmail.com',
+                                              ),
+                                              SizedBox(
+                                                height: Dimensions.sizedBox10,
+                                              ),
+                                              const DialogTextButton(
+                                                text: 'tel',
+                                                copiedText: '+99363581010',
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               );
                             },
                             alignment: Alignment.centerLeft,
-                            color: const Color.fromRGBO(223, 187, 117, 100),
+                            color: primaryColor,
                             icon: const Icon(Icons.info_outline),
                           ),
                         ),
@@ -171,17 +194,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-      floatingActionButton: ShowUpAnimationWidget(
-        widget: TextButton(
-          style: TextButton.styleFrom(backgroundColor: Colors.white24),
-          onPressed: () {},
-          child: TextWidget(
-            text: 'saveDate'.tr,
-            fontSize: Dimensions.textSize20,
-            textAlign: TextAlign.center,
-          ),
-        ),
       ),
     );
   }
