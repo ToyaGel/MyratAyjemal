@@ -132,7 +132,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 180,
+                    height: Dimensions.sizedBox180,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),

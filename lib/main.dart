@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Ata & Akjemal',
       initialRoute: RouteHelper.initial,
       getPages: RouteHelper.routes,
       locale: const Locale('tkm', 'TKM'),
