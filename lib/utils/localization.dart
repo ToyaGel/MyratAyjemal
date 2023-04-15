@@ -45,7 +45,7 @@ class Localization extends Translations {
           'b': 'E',
           'young': 'Eneś\n&\nAta',
           'mainText2':
-              'Biz Sizi iñ bagtly günümiziñ bolan nika toÿumyzyñ azyly myhmany bolmaklygyñyza çagyrÿarys!',
+              'Biz Sizi iñ bagtly günümiziñ bolan nika toÿumyzyñ arzyly myhmany bolmaklygyñyza çagyrÿarys!',
           'contact': 'Habarlaśmak üçin:',
           'email': 'Email: toychakylyklary@gmail.com',
           'tel': 'Telefon: (+993 63) 581010',
