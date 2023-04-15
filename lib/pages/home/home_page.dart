@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key, required this.guests}) : super(key: key);
+
+  final String guests;
 
   final currentLanguage = 'Türkmen dili'.tr.obs;
 
@@ -14,15 +16,24 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: primaryColor,
         leading: ShowUpAnimationWidget(
-          widget: Padding(
+          delayStart: 1,
+          child: Padding(
             padding: const EdgeInsets.all(5.0),
-            child: Image.asset('assets/image/ToyaGel Logo.png'),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                image: const DecorationImage(
+                  image: AssetImage('assets/image/ToyaGel Logo.png'),
+                ),
+              ),
+            ),
           ),
         ),
         actions: [
           Obx(
             () => ShowUpAnimationWidget(
-              widget: DropdownButtonHideUnderline(
+              delayStart: 1,
+              child: DropdownButtonHideUnderline(
                 child: Padding(
                   padding: const EdgeInsets.only(right: 13.0),
                   child: DropdownButton(
@@ -30,13 +41,13 @@ class HomePage extends StatelessWidget {
                       fontFamily: 'PoiretOne',
                       fontWeight: FontWeight.w900,
                       fontSize: Dimensions.textSize16,
-                      color: Colors.black,
+                      color: dialogColor,
                     ),
                     dropdownColor: dropdownColor,
                     icon: Icon(
                       Icons.language,
                       size: Dimensions.iconSize20,
-                      color: Colors.black54,
+                      color: dialogColor,
                     ),
                     value: currentLanguage.value,
                     alignment: Alignment.center,
@@ -77,123 +88,202 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage('assets/image/background_e1.jpg'),
+                image: AssetImage('assets/image/1.png'),
               ),
             ),
-            child: ShowUpAnimationWidget(
-              widget: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: Dimensions.sizedBox130,
-                  ),
-                  TextWidget(
-                    textAlign: TextAlign.center,
-                    text: 'mainText',
-                    fontSize: Dimensions.textSize38,
-                  ),
-                  SizedBox(
-                    height: Dimensions.sizedBox10,
-                  ),
-                  TextWidget(
-                    textAlign: TextAlign.center,
-                    text: 'dateTime',
-                    fontSize: Dimensions.textSize20,
-                  ),
-                  SizedBox(
-                    height: Dimensions.sizedBox10,
-                  ),
-                  TextWidget(
-                    textAlign: TextAlign.center,
-                    text: 'location',
-                    fontSize: Dimensions.textSize20,
-                  ),
-                  SizedBox(
-                    height: Dimensions.sizedBox100,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextWidget(
-                        textAlign: TextAlign.center,
-                        text: 'groom',
-                        fontSize: Dimensions.textSize38,
-                      ),
-                      TextWidget(
-                        textAlign: TextAlign.center,
-                        text: ' & ',
-                        fontSize: Dimensions.textSize20,
-                      ),
-                      TextWidget(
-                        textAlign: TextAlign.left,
-                        text: 'bride',
-                        fontSize: Dimensions.textSize38,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: Dimensions.sizedBox130,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        ShowUpAnimationWidget(
-                          widget: IconButton(
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) => ScaffoldMessenger(
-                                  child: Builder(
-                                    builder: (context) => Scaffold(
-                                      backgroundColor: Colors.transparent,
-                                      body: GestureDetector(
-                                        behavior: HitTestBehavior.opaque,
-                                        onTap: () => Navigator.of(context).pop(),
-                                        child: AlertDialog(
-                                          backgroundColor: dialogColor,
-                                          title: TextWidget(
-                                            text: 'contact'.tr,
-                                            textAlign: TextAlign.center,
-                                            fontSize: Dimensions.textSize18,
-                                          ),
-                                          content: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              const DialogTextButton(
-                                                text: 'email',
-                                                copiedText: 'toychakylyklary@gmail.com',
-                                              ),
-                                              SizedBox(
-                                                height: Dimensions.sizedBox10,
-                                              ),
-                                              const DialogTextButton(
-                                                text: 'tel',
-                                                copiedText: '+99363581010',
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
-                            alignment: Alignment.centerLeft,
-                            color: primaryColor,
-                            icon: const Icon(Icons.info_outline),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height:
+                      currentLanguage == 'Русский' ? Dimensions.sizedBox85 : Dimensions.sizedBox130,
+                ),
+                TextWidget(
+                  delayStart: 100,
+                  textColor: titleTextColor,
+                  text: 'mainText',
+                  fontSize: Dimensions.textSize38,
+                ),
+                guests != ''
+                    ? Column(
+                        children: [
+                          SizedBox(
+                            height: Dimensions.sizedBox50,
                           ),
-                        ),
-                      ],
+                          TextWidget(
+                            delayStart: 200,
+                            textColor: titleTextColor,
+                            text: guests,
+                            fontSize: Dimensions.textSize30,
+                          ),
+                        ],
+                      )
+                    : const SizedBox(),
+                SizedBox(
+                  height:
+                      currentLanguage == 'English' ? Dimensions.sizedBox86 : Dimensions.sizedBox50,
+                ),
+                const SwipeDownColumn(),
+                SizedBox(
+                  height: Dimensions.sizedBox80,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: Dimensions.sizedBox10,
                     ),
-                  ),
-                ],
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: 'b',
+                      fontSize: Dimensions.textSize38,
+                    ),
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: ' & ',
+                      fontSize: Dimensions.textSize20,
+                    ),
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: 'g',
+                      fontSize: Dimensions.textSize38,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            height: Dimensions.sizedBox10,
+            thickness: Dimensions.sizedBox3,
+            indent: Dimensions.sizedBox10,
+            endIndent: Dimensions.sizedBox10,
+            color: textColor,
+          ),
+          Container(
+            width: Dimensions.screenWidth,
+            height: Dimensions.screenHeight,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage('assets/image/2.png'),
               ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: Dimensions.sizedBox170,
+                ),
+                TextWidget(
+                  delayStart: 0,
+                  textColor: titleTextColor,
+                  text: 'mainText2',
+                  fontSize: Dimensions.textSize23,
+                ),
+                SizedBox(
+                  height: Dimensions.sizedBox50,
+                ),
+                TextWidget(
+                  delayStart: 0,
+                  textColor: textColor,
+                  text: 'young',
+                  fontSize: Dimensions.textSize50,
+                ),
+                SizedBox(
+                  height: Dimensions.sizedBox50,
+                ),
+                TextWidget(
+                  delayStart: 0,
+                  textColor: titleTextColor,
+                  text: 'dateTime',
+                  fontSize: Dimensions.textSize20,
+                ),
+                SizedBox(
+                  height: Dimensions.sizedBox10,
+                ),
+                TextWidget(
+                  delayStart: 0,
+                  textColor: titleTextColor,
+                  text: 'location',
+                  fontSize: Dimensions.textSize20,
+                ),
+              ],
             ),
           ),
         ],
+      ),
+      floatingActionButton: ShowUpAnimationWidget(
+        delayStart: 900,
+        child: IconButton(
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) => ScaffoldMessenger(
+                child: Builder(
+                  builder: (context) => Scaffold(
+                    backgroundColor: Colors.transparent,
+                    body: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () => Navigator.of(context).pop(),
+                      child: AlertDialog(
+                        backgroundColor: primaryColor,
+                        title: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.0),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/image/ToyaGel Logo.png'),
+                                ),
+                              ),
+                              height: Dimensions.sizedBox150,
+                              width: Dimensions.sizedBox150,
+                            ),
+                            SizedBox(
+                              height: Dimensions.sizedBox10,
+                            ),
+                            TextWidget(
+                              delayStart: 0,
+                              text: 'contact'.tr,
+                              textColor: dialogColor,
+                              fontSize: Dimensions.textSize18,
+                            ),
+                          ],
+                        ),
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const DialogTextButton(
+                              text: 'email',
+                              copiedText: 'toychakylyklary@gmail.com',
+                            ),
+                            SizedBox(
+                              height: Dimensions.sizedBox10,
+                            ),
+                            const DialogTextButton(
+                              text: 'tel',
+                              copiedText: '+99363581010',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+          alignment: Alignment.centerLeft,
+          color: textColor,
+          icon: Icon(
+            Icons.info_outline,
+            size: Dimensions.iconSize30,
+          ),
+        ),
       ),
     );
   }

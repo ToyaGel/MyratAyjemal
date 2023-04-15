@@ -20,11 +20,12 @@ class DialogTextButton extends StatelessWidget {
       onPressed: () async {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            backgroundColor: dialogColor,
+            backgroundColor: primaryColor,
             content: TextWidget(
+              delayStart: 0,
               text: 'copied'.tr,
-              textAlign: TextAlign.center,
               fontSize: Dimensions.textSize18,
+              textColor: dialogColor,
             ),
             duration: const Duration(seconds: 1),
           ),
@@ -34,8 +35,9 @@ class DialogTextButton extends StatelessWidget {
         );
       },
       child: TextWidget(
+        delayStart: 0,
         text: text.tr,
-        textAlign: TextAlign.center,
+        textColor: dialogColor,
         fontSize: Dimensions.textSize18,
       ),
     );
