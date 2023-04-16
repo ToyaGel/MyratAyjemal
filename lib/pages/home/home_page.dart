@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 image: const DecorationImage(
-                  image: AssetImage('assets/image/ToyaGel Logo.png'),
+                  image: AssetImage('assets/image/Toya.png'),
                 ),
               ),
             ),
