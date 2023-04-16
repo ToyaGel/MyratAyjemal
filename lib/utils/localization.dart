@@ -9,7 +9,7 @@ class Localization extends Translations {
           'location': '"Toÿ Mekany" Small hall, Türkmenbaśy Śaÿoly',
           'g': 'A',
           'b': 'E',
-          'young': 'Eneś\n&\nAta',
+          'young': 'Ata\n&\nEnesh',
           'mainText2': 'We invite you to be a special guest at our wedding on the happiest day!',
           'contact': 'Contact:',
           'email': 'Email: toychakylyklary@gmail.com',
@@ -25,9 +25,9 @@ class Localization extends Translations {
           'location': '"Toÿ Mekany" Малый зал, Türkmenbaśy Śaÿoly ',
           'g': 'А',
           'b': 'Э',
-          'young': 'Энеш\n&\nАта',
+          'young': 'Ата\n&\nЭнеш',
           'mainText2':
-              'Приглашаем вас стать специальным гостем на нашей свадьбе в самый счастливый день!',
+              'Приглашаем вас стать желанным гостем на нашей свадьбе в самый счастливый день!',
           'contact': 'Контакты:',
           'saveDate': 'Сохранить дату',
           'email': 'Email: toychakylyklary@gmail.com',
@@ -43,7 +43,7 @@ class Localization extends Translations {
           'location': '"Toÿ Mekany" kiçi zal, Türkmenbaśy Śaÿoly',
           'g': 'A',
           'b': 'E',
-          'young': 'Eneś\n&\nAta',
+          'young': 'Ata\n&\nEneś',
           'mainText2':
               'Biz Sizi iñ bagtly günümiziñ bolan nika toÿumyzyñ arzyly myhmany bolmaklygyñyza çagyrÿarys!',
           'contact': 'Habarlaśmak üçin:',
@@ -52,7 +52,7 @@ class Localization extends Translations {
           'copied': 'Göçürildi',
           //family
           'saparov': 'Hormatly Saparowlaryñ maśgalasy!',
-          'meredov': 'Hormatly Meredowlaryñ maśgalasy!',
+          'meredov': 'Hormatly Meredowlaryñ maśgalasy!', //32
         }
       };
 }

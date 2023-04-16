@@ -110,48 +110,57 @@ class HomePage extends StatelessWidget {
                           SizedBox(
                             height: Dimensions.sizedBox50,
                           ),
-                          TextWidget(
-                            delayStart: 200,
-                            textColor: titleTextColor,
-                            text: guests,
-                            fontSize: Dimensions.textSize30,
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                            child: TextWidget(
+                              delayStart: 200,
+                              textColor: titleTextColor,
+                              text: guests,
+                              fontSize: guests.length > 13
+                                  ? Dimensions.textSize23
+                                  : Dimensions.textSize30,
+                            ),
                           ),
                         ],
                       )
-                    : const SizedBox(),
+                    : SizedBox(
+                        height: Dimensions.sizedBox80,
+                      ),
                 SizedBox(
                   height:
                       currentLanguage == 'English' ? Dimensions.sizedBox86 : Dimensions.sizedBox50,
                 ),
                 const SwipeDownColumn(),
                 SizedBox(
-                  height: Dimensions.sizedBox80,
+                  height: guests != '' ? Dimensions.sizedBox80 : Dimensions.sizedBox125,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: Dimensions.sizedBox10,
-                    ),
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: 'b',
-                      fontSize: Dimensions.textSize38,
-                    ),
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: ' & ',
-                      fontSize: Dimensions.textSize20,
-                    ),
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: 'g',
-                      fontSize: Dimensions.textSize38,
-                    ),
-                  ],
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: guests.length > 13 ? 15 : 0.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextWidget(
+                        delayStart: 600,
+                        textColor: textColor,
+                        text: 'g',
+                        fontSize: Dimensions.textSize38,
+                      ),
+                      TextWidget(
+                        delayStart: 600,
+                        textColor: textColor,
+                        text: '& ',
+                        fontSize: Dimensions.textSize20,
+                      ),
+                      TextWidget(
+                        delayStart: 600,
+                        textColor: textColor,
+                        text: 'b',
+                        fontSize: Dimensions.textSize38,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
