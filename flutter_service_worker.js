@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "8b4ce1bb94039b138fc39343ac1c93b0",
-"index.html": "2cca7e178e98ac37b4d7da26db136ae7",
-"/": "2cca7e178e98ac37b4d7da26db136ae7",
+"index.html": "b44abf087b558978cdfdc0323bf61881",
+"/": "b44abf087b558978cdfdc0323bf61881",
 "main.dart.js": "d48e86fb598786f54f8e282a96da94ee",
 "flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "favicon.png": "f810af71729f00884faec6d1fc5e76f4",
@@ -19,7 +19,7 @@ const RESOURCES = {
 "assets/FontManifest.json": "145e013412087799bfafd355262f133c",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"assets/assets/image/Toya.png": "a35d6ceec32f43d3feb061063bfe910e",
+"assets/assets/image/Toya.png": "3ba66cfa0aaee45891b20707a62af836",
 "assets/assets/image/ToyaGel%2520Logo.png": "f810af71729f00884faec6d1fc5e76f4",
 "assets/assets/image/2.jpg": "5df600dd758b8233b416300b0287ea9f",
 "assets/assets/image/1.jpg": "a56801ce7a16cfad8d29b675265e3d7e",
