@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
               children: [
                 SizedBox(
                   height:
-                      currentLanguage == 'Русский' ? Dimensions.sizedBox85 : Dimensions.sizedBox130,
+                      currentLanguage == 'Русский' ? Dimensions.sizedBox86 : Dimensions.sizedBox130,
                 ),
                 TextWidget(
                   delayStart: 100,
@@ -124,43 +124,37 @@ class HomePage extends StatelessWidget {
                         ],
                       )
                     : SizedBox(
-                        height: Dimensions.sizedBox80,
+                        height: Dimensions.sizedBox40,
                       ),
                 SizedBox(
-                  height:
-                      currentLanguage == 'English' ? Dimensions.sizedBox86 : Dimensions.sizedBox50,
+                  height: guests != '' ? Dimensions.sizedBox50 : Dimensions.sizedBox85,
                 ),
                 const SwipeDownColumn(),
                 SizedBox(
-                  height: guests != '' ? Dimensions.sizedBox80 : Dimensions.sizedBox125,
+                  height: guests != '' ? Dimensions.sizedBox110 : Dimensions.sizedBox125,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: guests.length > 13 ? 15 : 0.0,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextWidget(
-                        delayStart: 600,
-                        textColor: textColor,
-                        text: 'g',
-                        fontSize: Dimensions.textSize38,
-                      ),
-                      TextWidget(
-                        delayStart: 600,
-                        textColor: textColor,
-                        text: '& ',
-                        fontSize: Dimensions.textSize20,
-                      ),
-                      TextWidget(
-                        delayStart: 600,
-                        textColor: textColor,
-                        text: 'b',
-                        fontSize: Dimensions.textSize38,
-                      ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: 'g',
+                      fontSize: Dimensions.textSize50,
+                    ),
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: '& ',
+                      fontSize: Dimensions.textSize20,
+                    ),
+                    TextWidget(
+                      delayStart: 600,
+                      textColor: textColor,
+                      text: 'b',
+                      fontSize: Dimensions.textSize50,
+                    ),
+                  ],
                 ),
               ],
             ),
