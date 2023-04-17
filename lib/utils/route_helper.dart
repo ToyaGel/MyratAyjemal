@@ -14,7 +14,7 @@ class RouteHelper {
   static const String ruslan = '/ruslan';
   static const String mekan = '/mekan';
   static const String arslan = '/arslan';
-  static const String christina = '/сhristina';
+  static const String christina = '/christina';
   static const String ania = '/ania';
   static const String oksana = '/oksana';
   static const String guncha = '/guncha';
@@ -117,7 +117,7 @@ class RouteHelper {
     GetPage(
       name: christina,
       page: () => HomePage(
-        guests: 'christina',
+        guests: 'сhristina',
       ),
     ),
     GetPage(
