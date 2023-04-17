@@ -39,7 +39,7 @@ class RouteHelper {
   static const String didar = '/didar';
   static const String esen = '/esen';
   static const String khoshgeldi = '/khoshgeldi';
-  static const String bayram = '/byaram';
+  static const String bayram = '/bayram';
 
   static List<GetPage> routes = [
     GetPage(
