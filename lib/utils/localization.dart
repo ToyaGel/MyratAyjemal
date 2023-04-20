@@ -49,6 +49,7 @@ class Localization extends Translations {
           'muhammet': 'Dear Muhammet!',
           'atajan': 'Dear Atajan!',
           'daria': 'Dear Daria!',
+          'gozel': 'Dear Gozel!',
 
           'didar': 'Dear Didar!',
           'bayram': 'Dear Bayram!',
@@ -103,6 +104,7 @@ class Localization extends Translations {
           'muhammet': 'Уважаемый Мухаммед!',
           'atajan': 'Уважаемый Атаджан!',
           'daria': 'Уважаемая Дария!',
+          'gozel': 'Уважаемая Гозел!',
 
           'didar': 'Уважаемый Дидар!',
           'esen': 'Уважаемый Эсен!',
@@ -156,6 +158,7 @@ class Localization extends Translations {
           'muhammet': 'Hormatly Muhammet!',
           'atajan': 'Hormatly Atajan!',
           'daria': 'Hormatly Daria!',
+          'gozel': 'Hormatly Gözel!',
 
           'didar': 'Hormatly Didar!',
           'esen': 'Hormatly Esen!',

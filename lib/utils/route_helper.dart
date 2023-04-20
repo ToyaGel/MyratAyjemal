@@ -35,6 +35,7 @@ class RouteHelper {
   static const String muhammet = '/muhammet';
   static const String atajan = '/atajan';
   static const String daria = '/daria';
+  static const String gozel = '/gozel';
 
   static const String didar = '/didar';
   static const String esen = '/esen';
@@ -262,6 +263,12 @@ class RouteHelper {
       name: khoshgeldi,
       page: () => HomePage(
         guests: 'khoshgeldi',
+      ),
+    ),
+    GetPage(
+      name: gozel,
+      page: () => HomePage(
+        guests: 'gozel',
       ),
     ),
   ];
