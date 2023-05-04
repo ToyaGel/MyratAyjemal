@@ -34503,7 +34503,7 @@ A.Of.prototype={
 ga8(a){return a.name}}
 A.E7.prototype={
 I(a,b){var s=$.aiC()
-return new A.tZ("/","Ata & Enesh",$.ak6(),new A.V2(),B.lZ,B.f6,!1,s,null)}}
+return new A.tZ("/","Myrat & Ayjemal",$.ak6(),new A.V2(),B.lZ,B.f6,!1,s,null)}}
 A.on.prototype={
 I(a,b){var s,r,q,p,o,n,m=null,l=A.eG(m,m,m,m,new A.dq(m,B.yr,m,A.rN(10),m,m,B.a5),m,m,m,m),k=t.E,j=A.a([new A.v7(new A.Tn(this),m)],k),i=$.abI(),h=$.cy(),g=A.dh(m,this.d.k(0,"\u0420\u0443\u0441\u0441\u043a\u0438\u0439")?$.aio():$.aii(),m),f=$.air(),e=this.c,d=e!==""
 if(d){s=A.dh(m,$.a9a(),m)
