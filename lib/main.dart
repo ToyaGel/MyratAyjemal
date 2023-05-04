@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Ata & Enesh',
+      title: 'Myrat & Ayjemal',
       initialRoute: RouteHelper.initial,
       getPages: RouteHelper.routes,
       locale: const Locale('tkm', 'TKM'),
