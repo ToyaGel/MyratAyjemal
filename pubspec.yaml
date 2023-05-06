@@ -37,3 +37,6 @@ flutter:
     - family: Breathing
       fonts:
         - asset: assets/font/Breathing.ttf
+    - family: Pacifico
+      fonts:
+        - asset: assets/font/Pacifico-Regular.ttf
