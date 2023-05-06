@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "8b4ce1bb94039b138fc39343ac1c93b0",
-"index.html": "8709fbc8f36678dda6e1b11b171ba8b6",
-"/": "8709fbc8f36678dda6e1b11b171ba8b6",
-"main.dart.js": "9a9dd895b64015392017a1e6dd9108be",
+"index.html": "968005523a8033e15cb45065f022a9e5",
+"/": "968005523a8033e15cb45065f022a9e5",
+"main.dart.js": "d1678193bad6a16824fb624ca6e30ea3",
 "flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "favicon.png": "f810af71729f00884faec6d1fc5e76f4",
 "icons/Icon-192.jpg": "e878686512a308791c95b16243741361",
@@ -21,8 +21,8 @@ const RESOURCES = {
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/image/Toya.png": "3ba66cfa0aaee45891b20707a62af836",
 "assets/assets/image/ToyaGel%2520Logo.png": "f810af71729f00884faec6d1fc5e76f4",
-"assets/assets/image/2.jpg": "81c7126aacb49797854c825a35619904",
-"assets/assets/image/1.jpg": "e397fd0a0b082fab93e7defbbfa8a1b5",
+"assets/assets/image/2.jpg": "7624df35d2c22c52c3454ec43d4e2621",
+"assets/assets/image/1.jpg": "0d4a2a0787a1225abd6ab7b5a30bcec7",
 "assets/assets/font/Breathing.ttf": "ca9698e55069c3859da5c293ca67a325",
 "assets/assets/font/PoiretOne-Regular.ttf": "8d15f9c0d468e1de889e81fae1087b61",
 "canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
