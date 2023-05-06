@@ -6,7 +6,7 @@ class Localization extends Translations {
         'en_US': {
           'mainText': 'Wedding Invitation',
           'location': '"Gülzaman" restaurant',
-          'young': 'Myrat\nand\nAyjemal',
+          'young': 'Myrat\nand\nAyjemal ',
           'mainText2': 'We invite you to be a special guest at our wedding on the happiest day!',
           'contact': 'Contact:',
           'email': 'Email: toychakylyklary@gmail.com',
@@ -19,7 +19,7 @@ class Localization extends Translations {
         'ru_RU': {
           'mainText': 'Приглашение на\n свадьбу',
           'location': '"Gülzaman" ресторан',
-          'young': 'Мурад\nи\nАйджемал',
+          'young': 'Мурад\nи\nАйджемал ',
           'mainText2':
               'Приглашаем вас стать желанным гостем на нашей свадьбе в самый счастливый день!',
           'contact': 'Контакты:',
@@ -28,13 +28,13 @@ class Localization extends Translations {
           'tel': 'Телефон: (+993 63) 581010',
           'copied': 'Скопировано',
           'guest': 'Дорогой Гость',
-          'may': '  Май',
+          'may': ' Май',
           'thursday': 'Четверг',
         },
         'tkm_TKM': {
           'mainText': 'Toÿ Çakylygy',
           'location': '"Gülzaman" restorany',
-          'young': 'Myrat\nwe\nAÿjemal',
+          'young': 'Myrat\nwe\nAÿjemal ',
           'mainText2':
               'Biz Sizi iñ bagtly günümiziñ bolan nika toÿumyzyñ arzyly myhmany bolmaklygyñyza çagyrÿarys!',
           'contact': 'Habarlaśmak üçin:',
