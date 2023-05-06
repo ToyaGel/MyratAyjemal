@@ -25,7 +25,7 @@ class DialogTextButton extends StatelessWidget {
               delayStart: 0,
               text: 'copied'.tr,
               fontSize: Dimensions.textSize18,
-              textColor: dialogColor,
+              fontFamily: 'PoiretOne',
             ),
             duration: const Duration(seconds: 1),
           ),
@@ -37,8 +37,8 @@ class DialogTextButton extends StatelessWidget {
       child: TextWidget(
         delayStart: 0,
         text: text.tr,
-        textColor: dialogColor,
         fontSize: Dimensions.textSize18,
+        fontFamily: 'PoiretOne',
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:AtaAkjemal/utils/utils.dart';
 import 'package:AtaAkjemal/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,13 +8,13 @@ class TextWidget extends StatelessWidget {
       {super.key,
       required this.text,
       required this.fontSize,
-      required this.textColor,
-      required this.delayStart});
+      required this.delayStart,
+      required this.fontFamily});
 
   final String text;
   final double fontSize;
-  final Color textColor;
   final int delayStart;
+  final String fontFamily;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class TextWidget extends StatelessWidget {
               text.tr,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: 'PoiretOne',
+                fontFamily: fontFamily,
                 fontSize: fontSize,
                 fontWeight: FontWeight.w900,
                 color: textColor,

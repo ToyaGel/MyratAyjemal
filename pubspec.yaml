@@ -15,7 +15,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   show_up_animation: ^2.0.0
-  add_2_calendar: ^2.2.3
   url_launcher: ^6.1.10
 
 dev_dependencies:
@@ -35,3 +34,6 @@ flutter:
     - family: PoiretOne
       fonts:
         - asset: assets/font/PoiretOne-Regular.ttf
+    - family: Breathing
+      fonts:
+        - asset: assets/font/Breathing.ttf

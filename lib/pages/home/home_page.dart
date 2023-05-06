@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
             height: Dimensions.screenHeight,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 image: AssetImage('assets/image/1.jpg'),
               ),
             ),
@@ -95,66 +95,24 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
-                  height:
-                      currentLanguage == 'Русский' ? Dimensions.sizedBox86 : Dimensions.sizedBox130,
+                  height: Dimensions.sizedBox170,
+                ),
+                Center(
+                  child: TextWidget(
+                    text: 'mainText',
+                    fontSize: Dimensions.textSize30,
+                    delayStart: 1,
+                    fontFamily: 'PoiretOne',
+                  ),
+                ),
+                SizedBox(
+                  height: Dimensions.sizedBox80,
                 ),
                 TextWidget(
-                  delayStart: 100,
-                  textColor: titleTextColor,
-                  text: 'mainText',
+                  text: 'young',
                   fontSize: Dimensions.textSize38,
-                ),
-                guests != ''
-                    ? Column(
-                        children: [
-                          SizedBox(
-                            height: Dimensions.sizedBox50,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: TextWidget(
-                              delayStart: 200,
-                              textColor: titleTextColor,
-                              text: guests,
-                              fontSize: guests.length > 13
-                                  ? Dimensions.textSize23
-                                  : Dimensions.textSize30,
-                            ),
-                          ),
-                        ],
-                      )
-                    : SizedBox(
-                        height: Dimensions.sizedBox40,
-                      ),
-                SizedBox(
-                  height: guests != '' ? Dimensions.sizedBox50 : Dimensions.sizedBox85,
-                ),
-                const SwipeDownColumn(),
-                SizedBox(
-                  height: guests != '' ? Dimensions.sizedBox110 : Dimensions.sizedBox125,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: 'g',
-                      fontSize: Dimensions.textSize50,
-                    ),
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: '& ',
-                      fontSize: Dimensions.textSize20,
-                    ),
-                    TextWidget(
-                      delayStart: 600,
-                      textColor: textColor,
-                      text: 'b',
-                      fontSize: Dimensions.textSize50,
-                    ),
-                  ],
+                  delayStart: 1,
+                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'PoiretOne',
                 ),
               ],
             ),
@@ -164,56 +122,92 @@ class HomePage extends StatelessWidget {
             thickness: Dimensions.sizedBox3,
             indent: Dimensions.sizedBox10,
             endIndent: Dimensions.sizedBox10,
-            color: textColor,
+            color: primaryColor,
           ),
           Container(
             width: Dimensions.screenWidth,
             height: Dimensions.screenHeight,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 image: AssetImage('assets/image/2.jpg'),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: Dimensions.sizedBox170,
-                ),
                 TextWidget(
-                  delayStart: 0,
-                  textColor: titleTextColor,
-                  text: 'mainText2',
-                  fontSize: Dimensions.textSize23,
+                  text: 'guest',
+                  fontSize: Dimensions.textSize27,
+                  delayStart: 1,
+                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'PoiretOne',
+                ),
+                SizedBox(
+                  height: Dimensions.sizedBox70,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                  child: TextWidget(
+                    text: 'mainText2',
+                    fontSize: Dimensions.textSize20,
+                    delayStart: 0,
+                    fontFamily: 'PoiretOne',
+                  ),
                 ),
                 SizedBox(
                   height: Dimensions.sizedBox50,
                 ),
-                TextWidget(
-                  delayStart: 0,
-                  textColor: textColor,
-                  text: 'young',
-                  fontSize: Dimensions.textSize50,
-                ),
-                SizedBox(
-                  height: Dimensions.sizedBox50,
-                ),
-                TextWidget(
-                  delayStart: 0,
-                  textColor: titleTextColor,
-                  text: 'dateTime',
-                  fontSize: Dimensions.textSize20,
-                ),
-                SizedBox(
-                  height: Dimensions.sizedBox10,
-                ),
-                TextWidget(
-                  delayStart: 0,
-                  textColor: titleTextColor,
-                  text: 'location',
-                  fontSize: Dimensions.textSize20,
-                ),
+                Column(
+                  children: [
+                    TextWidget(
+                        text: 'may',
+                        fontSize: Dimensions.textSize30,
+                        delayStart: 0,
+                        fontFamily: 'PoiretOne'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: IntrinsicHeight(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextWidget(
+                                text: 'thursday',
+                                fontSize: Dimensions.textSize22,
+                                delayStart: 0,
+                                fontFamily: 'PoiretOne'),
+                            VerticalDivider(
+                              width: Dimensions.sizedBox20,
+                              thickness: 1.0,
+                              color: textColor,
+                            ),
+                            TextWidget(
+                                text: '18',
+                                fontSize: Dimensions.textSize30,
+                                delayStart: 0,
+                                fontFamily: 'PoiretOne'),
+                            VerticalDivider(
+                              width: Dimensions.sizedBox20,
+                              thickness: 1.0,
+                              color: textColor,
+                            ),
+                            TextWidget(
+                              text: '18:00',
+                              fontSize: Dimensions.textSize22,
+                              delayStart: 0,
+                              fontFamily: 'PoiretOne',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    TextWidget(
+                      text: 'location',
+                      fontSize: Dimensions.textSize22,
+                      delayStart: 0,
+                      fontFamily: 'PoiretOne',
+                    ),
+                  ],
+                )
               ],
             ),
           ),
@@ -252,8 +246,8 @@ class HomePage extends StatelessWidget {
                             TextWidget(
                               delayStart: 0,
                               text: 'contact'.tr,
-                              textColor: dialogColor,
                               fontSize: Dimensions.textSize18,
+                              fontFamily: 'PoiretOne',
                             ),
                           ],
                         ),
@@ -281,7 +275,7 @@ class HomePage extends StatelessWidget {
             );
           },
           alignment: Alignment.centerLeft,
-          color: textColor,
+          color: dialogColor,
           icon: Icon(
             Icons.info_outline,
             size: Dimensions.iconSize30,
