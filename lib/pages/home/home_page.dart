@@ -112,7 +112,7 @@ class HomePage extends StatelessWidget {
                   text: 'young',
                   fontSize: Dimensions.textSize38,
                   delayStart: 1,
-                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'PoiretOne',
+                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'Pacifico',
                 ),
               ],
             ),
@@ -140,7 +140,7 @@ class HomePage extends StatelessWidget {
                   text: 'guest',
                   fontSize: Dimensions.textSize27,
                   delayStart: 1,
-                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'PoiretOne',
+                  fontFamily: currentLanguage != 'Русский' ? 'Breathing' : 'Pacifico',
                 ),
                 SizedBox(
                   height: Dimensions.sizedBox70,
