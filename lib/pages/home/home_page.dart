@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/image/1.jpg'),
+                image: AssetImage('assets/image/1c.jpg'),
               ),
             ),
             child: Column(
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/image/2.jpg'),
+                image: AssetImage('assets/image/2c.jpg'),
               ),
             ),
             child: Column(
